@@ -1,0 +1,524 @@
+/* Font setup */
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background-color: #fff;
+  transition: all 0.4s ease;
+}
+
+/* Use border-box everywhere to prevent inputs from overflowing on small screens */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  font-family: "Merriweather", serif;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0b3d91;
+  color: white;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  gap: 50px;
+}
+
+  .content-text h2 {
+  font-family: Merriweather, serif;
+  font-size: 2.2rem;
+  color: #3a82ff;
+}
+
+.content-text p {
+  font-size: 1rem;
+  /* dark text for light mode; overridden in dark-mode below */
+  color: #444;
+  margin: 15px 0 25px;
+  line-height: 1.7;
+}
+
+.cta-main {
+  background-color: #ffd700;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.cta-main:hover {
+  transform: scale(1.05);
+}
+
+.content-media img {
+  width: 450px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffd700;
+}
+
+#darkModeToggle {
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  padding: 6px 10px;
+  font-size: 18px;
+  transition: background 0.3s;
+}
+
+#darkModeToggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Hero */
+.hero {
+  background: url("https://dcist.com/wp-content/uploads/sites/3/2020/12/21193378153_8f295f4f01_k-1600x1014.jpg") center/cover no-repeat;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.55);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  animation: fadeInUp 1.5s ease;
+}
+
+.hero h2 {
+  font-size: 2.8em;
+  margin-bottom: 15px;
+}
+
+.hero button {
+  background-color: #ffd700;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.hero button {
+  animation: float 2.8s ease-in-out infinite;
+}
+
+/* Animasi Floating */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+  100% { transform: translateY(0); }
+}
+
+.hero button:hover {
+  background-color: #ffcc00;
+  transform: scale(1.05);
+}
+
+/* Section headings */
+section h2 {
+  color: #3a82ff;
+}
+
+/* Layanan */
+.services {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #f7f9fc;
+}
+
+.service-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.service-card .icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+/* Berita */
+.news {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.news-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.news-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: white;
+  transition: transform 0.3s;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+}
+
+.news-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.news-text {
+  padding: 15px;
+  text-align: left;
+}
+
+/* Form Pengaduan */
+.complaint {
+  background-color: #eef2f3;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.complaint form {
+  max-width: 500px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.complaint input,
+.complaint textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border 0.3s;
+  box-sizing: border-box;
+}
+
+.complaint input:focus,
+.complaint textarea:focus {
+  border-color: #0b3d91;
+  outline: none;
+}
+
+.complaint button {
+  background-color: #0b3d91;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.complaint button:hover {
+  background-color: #072d6b;
+}
+
+/* Footer */
+footer {
+  background-color: #0b3d91;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.socials {
+  margin: 15px 0;
+}
+
+.socials a {
+  color: white;
+  font-size: 22px;
+  margin: 0 8px;
+  text-decoration: none;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .hero {
+  background: url("https://dcist.com/wp-content/uploads/sites/3/2020/12/21193378153_8f295f4f01_k-1600x1014.jpg") center/cover no-repeat !important;
+  filter: brightness(0.8);
+}
+
+body.dark-mode .overlay {
+  background: rgba(0,0,0,0.55) !important;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #0a2b6a;
+}
+
+body.dark-mode .services {
+  background-color: #1b1b1b;
+}
+
+body.dark-mode .service-card {
+  background-color: #2a2a2a;
+  color: #eaeaea;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.05); 
+}
+
+body.dark-mode .service-card:hover {
+  background-color: #333;
+  box-shadow: 0 8px 20px rgba(255,255,255,0.1);
+}
+
+body.dark-mode .service-card,
+body.dark-mode .news-card {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark-mode .complaint {
+  background-color: #222;
+}
+
+/* make description text light in dark mode for readable contrast */
+body.dark-mode .content-text p {
+  color: #e0e0e0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+  header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* ======================================================= */
+/* RESPONSIVE NAVBAR */
+/* ======================================================= */
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* MOBILE MODE */
+@media (max-width: 768px) {
+  
+  header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
+
+  .logo h1 {
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.2;
+  }
+
+  .main-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .content-media img {
+    width: 100%;
+  }
+}
+
+
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    /* match header background so it follows light/dark mode automatically */
+    background-color: inherit;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    gap: 8px;
+    /* keep nav in flow so it pushes content instead of overlapping */
+    position: static;
+    z-index: 999;
+    align-items: center;
+    box-shadow: none;
+    margin-top: 8px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  #darkModeToggle {
+    font-size: 16px;
+    padding: 4px 10px;
+  }
+
+  /* position hamburger under the logo on left for mobile */
+  header {
+    position: relative;
+    /* stack logo/title above controls area */
+    flex-direction: column;
+    align-items: center;
+    /* provide room for the in-header controls so they don't overlap the hero */
+    /* give more top/bottom space so logo + controls fit without overlap */
+    /* Increased top padding so controls sit clearly under any portal/logo above */
+    padding: 18px 15px 28px; /* top/right-left/bottom */
+    min-height: 130px; /* increase to ensure controls are fully inside header */
+    z-index: 999; /* ensure header sits above other content */
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px; /* separate logo from in-header controls */
+  }
+
+  .logo img {
+    width: 46px;
+    height: auto;
+  }
+
+  .menu-toggle {
+    position: absolute;
+    left: 12px;
+    bottom: 20px; /* nudge controls lower so they don't collide with logo/portal above */
+    z-index: 1100;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    border-radius: 50%;
+    padding: 0;
+  }
+
+  /* ensure dropdown sits below header in normal flow */
+  nav ul {
+    margin-top: 8px;
+  }
+
+  /* place dark mode toggle at right side on mobile */
+  #darkModeToggle {
+    position: absolute;
+    right: 12px;
+    bottom: 20px; /* nudge controls lower so they don't collide with logo/portal above */
+    z-index: 1100;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    /* slightly smaller than hamburger on narrow screens for better balance */
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 18px;
+  }
+
+/* Small-screen tweaks to keep form inputs away from screen edges */
+@media (max-width: 480px) {
+  .complaint {
+    padding: 40px 12px;
+  }
+
+  .complaint form {
+    margin: 14px 12px;
+    padding: 0;
+  }
+}

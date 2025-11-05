@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal Pemerintah Daerah Buahdua</title>
+
+  <!-- FONT GOOGLE -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="logo.svg" alt="Logo Pemerintah" />
+      <h1>Portal Pemerintah Daerah Buahdua</h1>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <nav>
+      <ul>
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#layanan">Layanan</a></li>
+        <li><a href="#berita">Berita</a></li>
+        <li><a href="#pengaduan">Pengaduan</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+    <button id="darkModeToggle">🌙</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="beranda" class="hero">
+    <div class="overlay"></div>
+    <div class="hero-text">
+      <h2>Selamat Datang di Portal Resmi Pemerintah Daerah Buahdua</h2>
+      <p>Bersama membangun negeri dengan transparansi, integritas, dan pelayanan terbaik.</p>
+      <button id="cta">Pelajari Lebih Lanjut</button>
+    </div>
+  </section>
+
+   <section class="main-content" id="beranda">
+  <div class="content-text">
+    <h2>Membangun Daerah dengan Transparansi dan Pelayanan Terbaik</h2>
+    <p>
+      Portal Pemerintah Daerah Buahdua hadir sebagai jembatan informasi antara pemerintah dan masyarakat. 
+      Kami berkomitmen untuk memberikan layanan publik yang mudah, cepat, dan transparan.
+    </p>
+  </div>
+
+  <div class="content-media">
+    <img src="https://akcdn.detik.net.id/community/media/visual/2022/12/29/kantor-desa-buahdua-di-sumedang-yang-mirip-istana-presiden-1_169.jpeg?w=700&q=90" alt="Kantor Pemerintah" />
+  </div>
+</section>
+
+  <!-- Layanan -->
+  <section id="layanan" class="services">
+    <h2>Layanan Unggulan</h2>
+    <p>Memberikan pelayanan publik yang mudah, cepat, dan transparan untuk seluruh masyarakat.</p>
+    <div class="service-container">
+      <div class="service-card">
+        <div class="icon">🪪</div>
+        <h3>Administrasi Kependudukan</h3>
+        <p>Pembuatan KTP, KK, dan akta kelahiran kini bisa dilakukan secara daring.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">💼</div>
+        <h3>Perizinan Usaha</h3>
+        <p>Kemudahan pengurusan izin usaha melalui layanan online terintegrasi.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">📢</div>
+        <h3>Pengaduan Publik</h3>
+        <p>Sampaikan aspirasi, keluhan, dan laporan Anda kepada pemerintah daerah.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Berita -->
+  <section id="berita" class="news">
+    <h2>Berita Terkini</h2>
+    <div class="news-container">
+      <article class="news-card">
+        <img src="https://www.unicef.org/northmacedonia/sites/unicef.org.northmacedonia/files/styles/press_release_feature/public/20112019_49095087066.jpg.webp?itok=z6rj5hen" alt="Berita 1" />
+        <div class="news-text">
+          <h3>Pemda Gelar Rapat Pembangunan 2025</h3>
+          <p>Rapat koordinasi diadakan untuk membahas strategi pembangunan berkelanjutan berbasis masyarakat.</p>
+        </div>
+      </article>
+      <article class="news-card">
+        <img src="https://www.uneecops.com/wp-content/uploads/2024/10/on-the-go-portal.png" alt="Berita 2" />
+        <div class="news-text">
+          <h3>Transformasi Digital Pelayanan Publik</h3>
+          <p>Pemerintah berinovasi melalui digitalisasi layanan untuk mempercepat pelayanan kepada warga.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Pengaduan -->
+  <section id="pengaduan" class="complaint">
+    <h2>Form Pengaduan Masyarakat</h2>
+    <p>Silakan sampaikan aspirasi atau laporan Anda. Kami siap menindaklanjuti secara transparan.</p>
+    <form id="complaintForm">
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" placeholder="Masukkan nama lengkap Anda" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Masukkan email aktif Anda" required />
+
+      <label for="pesan">Isi Pengaduan</label>
+      <textarea id="pesan" rows="4" placeholder="Tuliskan isi pengaduan..." required></textarea>
+
+      <button type="submit">Kirim Pengaduan</button>
+    </form>
+    <p id="statusMessage"></p>
+  </section>
+
+  <!-- Footer -->
+  <footer id="kontak">
+    <h2>Hubungi Kami</h2>
+    <p>Email: 230660121104@student.unsap.ac.id | Telp: 085862738854 </p>
+    <p>Alamat:UNIVERSITAS SEBELAS APRIL
+Jl. Situ Angkrek No.19.
+Kec. Sumedang Utara, Kabupaten Sumedang, Jawa Barat, Indonesia</p>
+    <div class="socials">
+      <a href="#">🌐</a>
+      <a href="#">📘</a>
+      <a href="#">🐦</a>
+    </div>
+    <p>&copy; 2025 Portal Pemerintah Daerah Buahdua. Semua Hak Dilindungi.</p>
+  </footer>
+</body>
+</html>
